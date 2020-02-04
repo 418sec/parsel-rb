@@ -7,7 +7,7 @@ require "parsel/json"
 require "parsel/version"
 
 module Parsel
-  DEFAULT_IV = "f89209ffcdd1a225".freeze
+  DEFAULT_IV = SecureRandom.urlsafe_base64(16).freeze
   CIPHER = "AES-256-CBC".freeze
 
   def self.print_deprecation_message
